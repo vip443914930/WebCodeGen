@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeGenConfiguration>
+    <!-- 数据库连接信息 -->
+    <jdbcConnection
+            classPathEntry="D:/Program Files/tomcat7/apache-tomcat-7.0.56/lib/mysql-connector-java-5.1.29.jar"
+            driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost:3306/invest"
+            userId="root"
+            password="root" />
+
+    <project
+            resourcePath="D:\workspace\git\PracticeArea\WebCodeGen\ftl\bootstrap"
+            projectName="myTest"
+            projectPath="d:"
+            basePackagePath="com.mytest"
+            overWrite="true"
+    />
+
+    <tables>
+        <!-- 对应数据库表名 -->
+        <table tableName="t_credit_conf" domainObjectName="CreditConf" mapperName="CreditConfDao"/>
+    </tables>
+</codeGenConfiguration>
