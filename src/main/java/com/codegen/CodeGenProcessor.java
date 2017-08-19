@@ -65,6 +65,10 @@ public class CodeGenProcessor {
 
         // 业务代码
         for (TableConfig tableConfig : tableConfigs) {
+            if(columnMap.get(tableConfig.getTableName()) == null || columnMap.get(tableConfig.getTableName()).size() == 0){
+                System.out.println("无数据表：" + tableConfig.getTableName());
+                continue;
+            }
             MVCFileGenerator generator = new MVCFileGenerator(projectConfig, tableConfig, columnMap.get(tableConfig.getTableName()));
             // 后台相关
             generator.invoke(new GeneratorFile(GeneratorTypeEnum.FTL, "Dao.java.ftl", getJavaPath(projectConfig, "dao") + tableConfig.getMapperName() + ".java"));

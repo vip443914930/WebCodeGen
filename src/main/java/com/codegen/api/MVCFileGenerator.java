@@ -5,6 +5,7 @@ import com.codegen.config.DBConfig;
 import com.codegen.config.ProjectConfig;
 import com.codegen.config.TableConfig;
 import com.codegen.context.MvcContext;
+import com.codegen.enums.ErrorCodeEnum;
 import com.codegen.exception.GeneratorException;
 import com.codegen.meta.GeneratorFile;
 import com.codegen.meta.TableColumn;
@@ -82,5 +83,6 @@ public class MVCFileGenerator extends AbstractGenerator<MvcContext>{
 
     /** 校验 **/
     public void onValid(GeneratorFile file, MvcContext context) throws GeneratorException{
+
     }
 }
